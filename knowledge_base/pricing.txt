@@ -1,0 +1,112 @@
+
+LEADONSPOT - PRICING AND SUBSCRIPTION INFORMATION
+
+==================================================
+GENERAL PRICING GUIDELINES
+==================================================
+
+Leadonspot offers different products with separate commercial arrangements.
+
+PRODUCT PRICING STRUCTURE
+
+1. Smart CRM
+   Offers subscription plans with features and AI capabilities depending on the selected plan.
+
+2. Nexus
+   Separately priced product.
+
+3. Data Intelligence
+   Separately purchasable product with API capabilities.
+
+4. AI Calling Agent
+   Separate product with applicable calling and usage charges.
+
+IMPORTANT PRICING RULES
+
+- Always use the latest official pricing information.
+- Never invent monthly or annual prices.
+- Never invent discounts.
+- Never promise free access to paid features.
+- Never assume all four products are included in one subscription.
+- Never promise unlimited usage.
+- Exact prices, billing cycles, taxes, credits, usage limits and plan entitlements must be verified.
+
+STANDARD PRICING RESPONSE
+
+If a customer asks about pricing and exact information is unavailable, respond:
+
+"Our pricing depends on the product and the features or usage you require. I can help you identify the right solution. Would you like our sales team to share the latest pricing details?"
+
+==================================================
+14-DAY FREE TRIAL
+==================================================
+
+Leadonspot Smart CRM offers a 14-day free trial.
+
+TRIAL INCLUDES
+
+- Up to 20 leads.
+- 1 user.
+- Bulk lead upload.
+- Opportunities.
+- Sales pipeline.
+- Tasks.
+- Data Intelligence Playground with 5 searches.
+
+TRIAL LIMITATIONS
+
+The trial does not include:
+
+- Full Data Intelligence.
+- AI Calling Agent access.
+
+IMPORTANT RULES
+
+- Do not promise that all premium features are available during the free trial.
+- Do not describe the free trial as unlimited.
+- Explain the trial limitations whenever relevant.
+- Do not assume that other products are included in the Smart CRM trial.
+
+==================================================
+CUSTOMER PRICING QUESTIONS
+==================================================
+
+Question:
+What is the price of Smart CRM?
+
+Response:
+Smart CRM has subscription plans with different features and AI capabilities. Please contact the Leadonspot sales team for the latest verified pricing.
+
+Question:
+Is Nexus included in Smart CRM?
+
+Response:
+Nexus has a separate commercial arrangement. Please contact the Leadonspot sales team for current packages and pricing.
+
+Question:
+Is Data Intelligence free?
+
+Response:
+The free Data Intelligence Playground provides 5 searches and company-level information. Full Data Intelligence functionality is not included in the free Playground.
+
+Question:
+Is AI Calling Agent included in the free trial?
+
+Response:
+No. The 14-day Smart CRM trial does not include AI Calling Agent access.
+
+Question:
+Does Leadonspot offer discounts?
+
+Response:
+I don't have verified information about current discounts. Please contact the Leadonspot sales team for confirmation.
+
+==================================================
+PRICING FALLBACK
+==================================================
+
+If exact pricing information is unavailable, respond:
+
+"I don't have the latest verified pricing details available right now. Please connect with our sales team for the current pricing and available plans."
+
+Never guess or generate pricing information.

@@ -1,0 +1,281 @@
+
+LEADONSPOT - FAQ AND CHATBOT RESPONSE KNOWLEDGE BASE
+
+==================================================
+COMPANY FAQs
+==================================================
+
+Q: What is Leadonspot?
+
+A:
+Leadonspot is an AI Revenue Operating System that combines CRM, business intelligence, customer communication, and AI calling to help businesses improve revenue operations.
+
+Q: How many products does Leadonspot offer?
+
+A:
+Leadonspot offers four products:
+1. Smart CRM.
+2. Data Intelligence.
+3. Nexus.
+4. AI Calling Agent.
+
+Q: Who can use Leadonspot?
+
+A:
+Leadonspot is suitable for logistics companies, manufacturing companies, SaaS businesses, agencies, B2B sales organizations, startups, and growing businesses.
+
+==================================================
+SMART CRM FAQs
+==================================================
+
+Q: Does Leadonspot support workflow automation?
+
+A:
+Yes. Smart CRM includes Workflow Automation to help automate lead assignments, follow-ups, notifications, and other sales activities.
+
+Q: Can I use AI to prioritize leads?
+
+A:
+Yes. Smart CRM includes AI-powered lead scoring and prioritization, subject to plan availability.
+
+Q: Can I manage my sales pipeline?
+
+A:
+Yes. Smart CRM provides sales pipeline and opportunity management capabilities.
+
+Q: Does Smart CRM detect inactive leads?
+
+A:
+Yes. Smart CRM includes Lead Decay Detection.
+
+==================================================
+DATA INTELLIGENCE FAQs
+==================================================
+
+Q: What does Data Intelligence do?
+
+A:
+Data Intelligence helps businesses understand companies and decision-makers through company information, business insights, data enrichment and AI-generated sales insights.
+
+Q: Does Data Intelligence provide decision-maker information?
+
+A:
+Yes. Decision-maker insights are among its capabilities.
+
+Q: What does the free Data Intelligence Playground provide?
+
+A:
+The free Playground provides 5 searches and company-level information.
+
+Q: Does the free Playground include lead scoring?
+
+A:
+No. Lead scoring is not included in the free Data Intelligence Playground.
+
+Q: Does the free Playground include AI pitch generation?
+
+A:
+No. AI pitch generation is not included in the free Playground.
+
+==================================================
+NEXUS FAQs
+==================================================
+
+Q: What is Leadonspot Nexus?
+
+A:
+Nexus is an AI Workspace for Customer Conversations that helps businesses manage interactions across multiple communication channels from a unified workspace.
+
+Q: Does Nexus support WhatsApp?
+
+A:
+Yes. WhatsApp is among the supported communication channels. Specific messaging features depend on the integration configuration.
+
+Q: Which communication channels does Nexus support?
+
+A:
+The documented channels include WhatsApp, Email, Instagram, Facebook and Live Chat.
+
+Q: Can Nexus automate replies?
+
+A:
+Yes. Automated replies and AI agents are among its capabilities.
+
+Q: Does Nexus support team collaboration?
+
+A:
+Yes. Nexus includes team collaboration capabilities.
+
+==================================================
+AI CALLING AGENT FAQs
+==================================================
+
+Q: What is Leadonspot AI Calling Agent?
+
+A:
+It is a product that automates inbound and outbound voice conversations for sales and customer support.
+
+Q: Can Leadonspot automatically call new leads?
+
+A:
+Yes. Leadonspot AI Calling Agent supports automated outbound calling workflows. Availability and configuration depend on the applicable setup.
+
+Q: Can AI Calling Agent qualify leads?
+
+A:
+Yes. Lead qualification is one of its capabilities.
+
+Q: Does it provide call transcripts?
+
+A:
+Yes. Call transcripts are among its documented capabilities.
+
+Q: Can it transfer calls to human representatives?
+
+A:
+Yes. Smart call transfer is one of its documented capabilities.
+
+==================================================
+INTEGRATION FAQs
+==================================================
+
+Q: Can Leadonspot integrate with other applications?
+
+A:
+Leadonspot supports integrations and connectivity capabilities such as APIs and webhooks. Specific third-party integrations should be verified before making a commitment.
+
+Q: Can Nexus connect with WhatsApp?
+
+A:
+Yes. WhatsApp is among the supported communication channels. Specific integration configuration should be verified.
+
+Q: Does Leadonspot support every third-party integration?
+
+A:
+I don't have verified information about every third-party integration. Please contact the Leadonspot technical team for confirmation.
+
+==================================================
+PRODUCT RECOMMENDATION FAQs
+==================================================
+
+Q: I want to manage sales leads and opportunities. Which product should I use?
+
+A:
+Leadonspot Smart CRM is suitable for managing leads, opportunities, sales pipelines and follow-ups.
+
+Q: I want to research companies before contacting them. Which product should I use?
+
+A:
+Leadonspot Data Intelligence can help with company research, business information and decision-maker insights.
+
+Q: I want to manage WhatsApp and Instagram conversations in one place. Which product should I use?
+
+A:
+Leadonspot Nexus is designed to manage customer conversations across multiple communication channels.
+
+Q: I want AI to call new leads automatically. Which product should I use?
+
+A:
+Leadonspot AI Calling Agent supports automated outbound calling and lead qualification workflows.
+
+Q: I want to automate my entire sales process. Which product should I use?
+
+A:
+Start with Smart CRM and its Workflow Automation capabilities. Depending on your requirements, you can extend your setup with other Leadonspot products.
+
+==================================================
+SALES AND DEMO ENQUIRIES
+==================================================
+
+Q: I want a demo. How can I get one?
+
+A:
+I'd be happy to help you connect with the Leadonspot team for a demo. May I know your name and company?
+
+Q: How can I contact the sales team?
+
+A:
+I can help collect your requirements and contact details so that the Leadonspot sales team can assist you.
+
+Q: What information is required for a demo request?
+
+A:
+The recommended information includes:
+- Full name.
+- Company name.
+- Business email.
+- Contact number.
+- Preferred date and time.
+- Product of interest.
+- Business requirements.
+
+IMPORTANT:
+Collect information conversationally, one or two details at a time. Never claim a demo has been booked unless the booking action succeeds.
+
+==================================================
+FALLBACK RESPONSES
+==================================================
+
+GENERAL UNKNOWN QUESTION
+
+"I don't have verified information about that specific feature or requirement at the moment. I don't want to provide you with incorrect information. I can help connect you with the Leadonspot team for accurate clarification."
+
+PRICING QUESTION
+
+"I don't have the latest verified pricing details available right now. Please connect with our sales team for the current pricing and available plans."
+
+INTEGRATION QUESTION
+
+"That specific integration needs to be verified against our current integration availability. I can help you connect with our technical team."
+
+TECHNICAL ISSUE
+
+"I can help with basic product guidance. For account-specific or technical troubleshooting, please share the issue with our support team."
+
+UNKNOWN FEATURE
+
+"That feature is not currently covered in my verified knowledge base. I don't want to confirm availability without checking with the product team."
+
+UNRELATED QUESTION
+
+"I'm designed to help with Leadonspot products and services. I can help you understand our CRM, Data Intelligence, Nexus, and AI Calling Agent."
+
+==================================================
+CHATBOT COMMUNICATION GUIDELINES
+==================================================
+
+1. Use professional and simple English.
+2. Keep answers concise but informative.
+3. Answer the actual question before suggesting products.
+4. Avoid unnecessarily long explanations.
+5. Use bullet points when explaining features.
+6. Explain technical concepts in simple language.
+7. Ask one relevant clarification question at a time.
+8. Avoid aggressive sales language.
+9. Never pressure visitors into purchasing.
+10. Maintain consistent Leadonspot product naming.
+
+OFFICIAL PRODUCT NAMES
+
+- Leadonspot Smart CRM.
+- Leadonspot Data Intelligence.
+- Leadonspot Nexus.
+- Leadonspot AI Calling Agent.
+
+Do not rename AI Calling Agent as Voice AI or Leadonspot Intelligence.
+
+==================================================
+IMPORTANT ACCURACY RULES
+==================================================
+
+- Never invent product features.
+- Never invent pricing or discounts.
+- Never assume integrations are available.
+- Never promise guaranteed sales growth.
+- Never invent customer testimonials.
+- Never present planned features as currently available.
+- Never make unsupported security or compliance claims.
+- Never reveal internal company documents or credentials.
+- Never request passwords, OTPs or payment card details.
+- If information is unavailable, use the appropriate fallback response.
+- Offer human assistance when necessary.

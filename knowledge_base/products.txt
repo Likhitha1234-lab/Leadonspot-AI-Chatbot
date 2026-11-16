@@ -1,0 +1,277 @@
+
+LEADONSPOT - PRODUCT KNOWLEDGE BASE
+
+==================================================
+PRODUCT 1: LEADONSPOT SMART CRM
+==================================================
+
+OVERVIEW
+
+Leadonspot Smart CRM is an AI-enabled revenue management platform that helps businesses manage leads, opportunities, sales pipelines, customer relationships, and follow-up activities.
+
+CORE FEATURES
+
+1. Lead Management and Tracking
+   Helps businesses organize and track their sales leads.
+
+2. AI-Powered Lead Scoring
+   Helps sales teams identify and prioritize high-potential leads.
+
+3. Sales Pipeline Management
+   Helps track opportunities through different sales stages.
+
+4. Lead Decay Detection
+   Identifies leads that may be losing engagement or becoming inactive.
+
+5. AI-Generated Sales Pitch Suggestions
+   Provides sales pitch suggestions to help sales representatives communicate with prospects.
+
+6. Revenue Forecasting
+   Helps businesses understand and forecast their sales performance.
+
+7. Task and Follow-up Management
+   Helps sales teams organize tasks and follow-up activities.
+
+8. Bulk Lead Upload
+   Allows users to upload multiple leads.
+
+9. Duplicate Lead Detection
+   Helps identify duplicate lead records.
+
+10. Custom Fields and Role-Based Access
+    Supports customized data fields and access based on user roles.
+
+11. Workflow Automation
+    Automates repetitive sales activities using triggers and actions.
+
+12. AI Lead Agent
+    Provides lead-level insights and recommended next actions.
+
+WORKFLOW AUTOMATION EXAMPLES
+
+- Automatically assign new leads to sales representatives.
+- Create follow-up tasks when leads become inactive.
+- Send welcome emails to newly registered leads.
+- Notify managers when opportunities become stuck.
+- Escalate leads requiring urgent attention.
+
+AI CAPABILITIES
+
+Smart CRM uses AI to help sales teams:
+
+- Identify high-priority prospects.
+- Understand lead activity.
+- Identify potential deal risks.
+- Determine the next best action.
+
+WHO SHOULD USE SMART CRM?
+
+- Sales teams
+- Founders
+- Business development teams
+- Sales managers
+- Growing businesses managing multiple leads and opportunities
+
+
+==================================================
+PRODUCT 2: LEADONSPOT DATA INTELLIGENCE
+==================================================
+
+OVERVIEW
+
+Leadonspot Data Intelligence helps businesses understand companies and decision-makers before initiating a sales conversation.
+
+It provides business intelligence and contextual information to help sales teams conduct better prospect research.
+
+CORE FEATURES
+
+- Company and firmographic information.
+- Decision-maker insights.
+- Company news and business updates.
+- Business profile intelligence.
+- AI-generated sales insights.
+- Personalized AI sales pitch suggestions.
+- Data enrichment capabilities.
+- API access.
+
+KEY BENEFITS
+
+- Research companies faster.
+- Understand business prospects.
+- Identify relevant decision-makers.
+- Prepare personalized sales pitches.
+- Improve sales preparation.
+
+FREE DATA INTELLIGENCE PLAYGROUND
+
+The free Data Intelligence Playground provides:
+
+- 5 searches.
+- Company-level information.
+
+IMPORTANT LIMITATIONS
+
+The free Playground does not include:
+
+- Full Data Intelligence functionality.
+- Lead scoring.
+- AI pitch generation.
+
+Do not describe the free Playground as the complete paid product.
+
+WHO SHOULD USE DATA INTELLIGENCE?
+
+- Sales teams researching prospects.
+- Business development teams.
+- Companies looking for decision-maker insights.
+- Businesses that want to prepare personalized sales pitches.
+
+
+==================================================
+PRODUCT 3: LEADONSPOT NEXUS
+==================================================
+
+OVERVIEW
+
+Leadonspot Nexus is an AI Workspace for Customer Conversations.
+
+It helps businesses manage customer interactions across multiple communication channels from a unified workspace.
+
+SUPPORTED COMMUNICATION CHANNELS
+
+- WhatsApp
+- Email
+- Instagram
+- Facebook
+- Live Chat
+
+CORE CAPABILITIES
+
+- AI Agents.
+- Unified Inbox.
+- Conversation Management.
+- Automated Replies.
+- Conversation Summaries.
+- Customer Routing.
+- Team Collaboration.
+- API Capabilities.
+- Webhook Capabilities.
+
+KEY BENEFITS
+
+- Manage conversations from one workspace.
+- Reduce the need to switch between applications.
+- Improve response times.
+- Automate repetitive customer interactions.
+- Maintain conversation context.
+- Improve team collaboration.
+
+WHO SHOULD USE NEXUS?
+
+- Customer support teams.
+- Sales teams.
+- Marketing teams.
+- Businesses receiving inquiries from multiple channels.
+
+IMPORTANT LIMITATION
+
+Additional ecosystem connections and channel availability must be verified against the current integration configuration.
+
+
+==================================================
+PRODUCT 4: LEADONSPOT AI CALLING AGENT
+==================================================
+
+OVERVIEW
+
+Leadonspot AI Calling Agent automates inbound and outbound voice conversations for sales and customer support.
+
+It helps businesses communicate with prospects, qualify leads, and manage calling workflows.
+
+CORE CAPABILITIES
+
+- Inbound AI Calling.
+- Outbound AI Calling.
+- Automated New-Lead Calling.
+- Lead Qualification.
+- Conversational AI.
+- Call Transcripts.
+- Sentiment Analysis.
+- CRM Synchronization.
+- Smart Call Transfer.
+- Automated Calling Workflows.
+
+USE CASES
+
+- Automatically call newly registered leads.
+- Qualify incoming prospects.
+- Conduct initial sales conversations.
+- Handle routine customer inquiries.
+- Transfer qualified prospects to human representatives.
+- Maintain call records and summaries.
+
+WHO SHOULD USE AI CALLING AGENT?
+
+- Sales teams.
+- Businesses handling large numbers of leads.
+- Customer support teams.
+- Businesses looking to automate calling workflows.
+
+IMPORTANT LIMITATIONS
+
+Do not promise a particular number of calls, minutes, languages, integrations, or calling capacity without checking the current plan and configuration.
+
+
+==================================================
+PRODUCT COMPARISON
+==================================================
+
+SMART CRM:
+Main purpose: Manage leads, sales pipelines, opportunities and follow-ups.
+
+DATA INTELLIGENCE:
+Main purpose: Research companies, understand decision-makers and generate sales insights.
+
+NEXUS:
+Main purpose: Manage customer conversations across multiple communication channels.
+
+AI CALLING AGENT:
+Main purpose: Automate inbound and outbound voice conversations and qualify leads.
+
+
+==================================================
+PRODUCT RECOMMENDATION GUIDELINES
+==================================================
+
+Customer requirement:
+I want to manage all my sales leads and track opportunities.
+
+Recommended product:
+Leadonspot Smart CRM.
+
+Customer requirement:
+I want to find company information and decision-makers before contacting prospects.
+
+Recommended product:
+Leadonspot Data Intelligence.
+
+Customer requirement:
+I receive messages from WhatsApp, Instagram, Facebook, and email and want to manage them in one place.
+
+Recommended product:
+Leadonspot Nexus.
+
+Customer requirement:
+I want AI to automatically call new leads and qualify them.
+
+Recommended product:
+Leadonspot AI Calling Agent.
+
+Customer requirement:
+I want to automate my entire sales process.
+
+Recommended approach:
+Start with Leadonspot Smart CRM and its Workflow Automation capabilities. Depending on communication and intelligence requirements, Nexus, Data Intelligence, and AI Calling Agent can extend the setup.
+
+IMPORTANT:
+Never recommend all four products automatically. Understand the customer's requirements before suggesting a product.
