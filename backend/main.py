@@ -1,34 +1,35 @@
-
 import re
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from chatbot import get_chatbot_response, UNKNOWN_ANSWER
+from chatbot import get_chatbot_response, warm_up
 from lead_capture import (
     process_lead_message,
     get_conversation,
     offer_followup,
-    save_conversation
+    save_conversation,
+    pending_prompt
 )
 
+warm_up()
 
-# Last few turns per conversation (in memory)
+# Last few turns per conversation (in memory) so follow-ups work.
 HISTORY = {}
 
 
 def remember(conversation_id, question, answer):
     turns = HISTORY.setdefault(conversation_id, [])
-
     turns.append({"role": "user", "content": question})
     turns.append({"role": "assistant", "content": answer})
-
     del turns[:-12]
 
 
 def is_unknown_answer(answer):
-    return answer.startswith(UNKNOWN_ANSWER[:40])
+    # Any "not verified" answer (fixed fallback or a careful hedge) offers
+    # a human follow-up.
+    return "don't have verified" in answer.lower()
 
 
 def conversation_is_active(conversation_id):
@@ -79,6 +80,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def home():
+
     return {
         "message": "Leadonspot Chatbot API is running!"
     }
@@ -113,91 +115,43 @@ def chat(request: ChatRequest):
 
     try:
 
-        # ------------------------------------------
-        # STEP 1: RESET CONVERSATION
-        # ------------------------------------------
-
-        if re.search(
-            r"start (the |a )?(conversation|chat) (again|over)|"
-            r"start over|reset (the )?(chat|conversation)|new conversation",
-            question.lower()
-        ):
-
+        if re.search(r"start (the |a )?(conversation|chat) (again|over)|"
+                     r"start over|reset (the )?(chat|conversation)|new conversation",
+                     question.lower()):
             HISTORY.pop(conversation_id, None)
-
-            save_conversation(
-                conversation_id,
-                "reset",
-                {},
-                "cancelled",
-                1
-            )
-
+            save_conversation(conversation_id, "reset", {}, "cancelled", 1)
             return ChatResponse(
                 answer="Sure, let's start fresh. How can I help you with Leadonspot?"
             )
 
-        # ------------------------------------------
-        # STEP 2: HANDLE LEAD CAPTURE
-        # ------------------------------------------
-
+        # STEP 1: lead capture (demo / contact request / active form)
         lead_answer, handled = process_lead_message(
-            conversation_id,
-            question
+            conversation_id, question
         )
 
         if handled:
+            remember(conversation_id, question, lead_answer)
+            return ChatResponse(answer=lead_answer)
 
-            remember(
-                conversation_id,
-                question,
-                lead_answer
-            )
-
-            return ChatResponse(
-                answer=lead_answer
-            )
-
-        # ------------------------------------------
-        # STEP 3: NORMAL CHATBOT RESPONSE
-        # ------------------------------------------
-
+        # STEP 2: normal RAG answer (with chat history for follow-ups)
         history = HISTORY.get(conversation_id, [])
 
-        answer = get_chatbot_response(
-            question,
-            history
-        )
+        answer = get_chatbot_response(question, history)
 
-        # ------------------------------------------
-        # STEP 4: OFFER HUMAN FOLLOW-UP
-        # ONLY WHEN THE ANSWER IS UNKNOWN
-        # ------------------------------------------
+        # If the user was mid-form and asked a side question,
+        # answer it and then re-ask the pending field.
+        pending = pending_prompt(conversation_id)
 
-        if (
-            is_unknown_answer(answer)
-            and not conversation_is_active(conversation_id)
-        ):
+        if pending:
+            answer = f"{answer}\n\n{pending}"
 
-            answer = (
-                answer
-                + "\n\n"
-                + offer_followup(conversation_id)
-            )
+        # STEP 3: bot could not answer -> offer human follow-up
+        elif is_unknown_answer(answer) and not conversation_is_active(conversation_id):
+            answer = f"{answer}\n\n{offer_followup(conversation_id)}"
 
-        # ------------------------------------------
-        # STEP 5: SAVE CONVERSATION HISTORY
-        # ------------------------------------------
+        remember(conversation_id, question, answer)
 
-        remember(
-            conversation_id,
-            question,
-            answer
-        )
-
-        return ChatResponse(
-            answer=answer
-        )
+        return ChatResponse(answer=answer)
 
     except Exception as e:
 

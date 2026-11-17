@@ -1,0 +1,406 @@
+==================================================
+CAPABILITY FAQs
+==================================================
+These answers use only information documented in Leadonspot's product
+documents and website. Where a detail is only partly documented, the answer
+says so and asks the customer to confirm with the Leadonspot team.
+
+==================================================
+WORKFLOW AUTOMATION
+==================================================
+
+Q: Can I automatically assign new leads to sales representatives?
+
+A:
+Yes. Smart CRM Workflow Automation can automatically assign new leads to sales representatives.
+
+Q: Can I send a welcome email when a new lead is created?
+
+A:
+Yes. Workflow Automation examples include sending welcome emails to newly registered leads.
+
+Q: Can I create a follow-up task automatically?
+
+A:
+Yes. Workflow Automation can create follow-up tasks automatically, for example when leads become inactive.
+
+Q: Can I notify managers when a lead remains unattended?
+
+A:
+Yes. Workflow Automation can notify managers when opportunities become stuck and escalate leads that need urgent attention. Please confirm the exact unattended-lead rule with the Leadonspot team.
+
+Q: Can I trigger automation when a deal gets stuck?
+
+A:
+Yes. Workflow Automation can notify managers when opportunities become stuck.
+
+Q: Can I assign leads using round-robin distribution?
+
+A:
+Leadonspot automation supports task assignment and rep workload balancing. I don't have verified information about round-robin distribution specifically, so please confirm it with the Leadonspot team.
+
+Q: Can I create different workflows for different industries?
+
+A:
+Yes. Leadonspot has industry-specific solutions, with workflows and dashboards built for verticals such as education, healthcare, finance, manufacturing, logistics and IT/SaaS.
+
+Q: Can I send notifications when a lead changes pipeline stage?
+
+A:
+Workflow Automation supports stage transitions and notification routing using triggers and actions. Please confirm the exact stage-change alert setup with the Leadonspot team.
+
+Q: Can I automate follow-ups after two days of inactivity?
+
+A:
+Workflow Automation can create follow-up tasks when leads become inactive, and Lead Decay Detection identifies inactive leads. Please confirm the exact two-day timing rule with the Leadonspot team.
+
+Q: Can I automate lead assignment based on location?
+
+A:
+Leadonspot's industry workflows describe leads being auto-assigned or routed using factors such as location, language, territory and workload. Please confirm the exact setup for your business with the Leadonspot team.
+
+==================================================
+INTEGRATIONS
+==================================================
+
+Q: Can I connect Leadonspot with my website?
+
+A:
+Leadonspot provides webhooks and REST API endpoints that connect it with other tools, and its industry pages describe enquiries arriving from website forms. Please confirm your specific website setup with the Leadonspot team.
+
+Q: Can I capture leads from website forms?
+
+A:
+Leadonspot's solutions describe capturing enquiries from channels including website forms, WhatsApp and calls. Please confirm your exact form setup with the Leadonspot team.
+
+Q: Does Leadonspot provide API access?
+
+A:
+Yes. Leadonspot provides a documented REST API and webhooks.
+
+Q: Can I use webhooks?
+
+A:
+Yes. Webhooks and REST API endpoints are available.
+
+Q: Can I connect third-party applications?
+
+A:
+Yes. Leadonspot connects natively with Slack, Microsoft 365, Google Workspace and Salesforce, with thousands of tools through Zapier, and with other systems through its webhooks and REST API. Specific integrations should be verified with the Leadonspot team.
+
+Q: Can I integrate Google Sheets?
+
+A:
+Leadonspot connects natively with Google Workspace and with thousands of tools via Zapier, and it supports CSV and spreadsheet lead uploads. Please confirm the Google Sheets integration specifically with the Leadonspot team.
+
+Q: Can I connect Google Calendar?
+
+A:
+Leadonspot connects natively with Google Workspace. Please confirm the Google Calendar integration specifically with the Leadonspot team.
+
+Q: Can I integrate Leadonspot with my existing CRM?
+
+A:
+Leadonspot connects with other systems through its REST API, webhooks, Zapier and native integrations such as Salesforce. Please confirm your specific CRM integration with the Leadonspot team.
+
+Q: Can I sync customer conversations with CRM records?
+
+A:
+Yes. Nexus conversations and AI Calling Agent transcripts connect with CRM records, so customer emails, chats, calls and deal updates appear in one timeline.
+
+Q: What happens if an integration stops working?
+
+A:
+Check the integration status, verify that the connected account is active, check your internet connection and review any error messages. If it still fails, contact support with the affected account details and the approximate time of the issue.
+
+==================================================
+DATA INTELLIGENCE
+==================================================
+
+Q: Can I search for companies by industry?
+
+A:
+Data Intelligence provides company information such as industry, company size, employee count and revenue where available, and you can research companies in the Data Intelligence Playground. Please confirm the exact search filters with the Leadonspot team.
+
+Q: Can I find companies based on their annual revenue?
+
+A:
+Data Intelligence provides firmographic details including revenue information where available. Please confirm the exact revenue filters with the Leadonspot team.
+
+Q: Can I identify companies by employee count?
+
+A:
+Data Intelligence provides firmographic details including employee count where available. Please confirm the exact filters with the Leadonspot team.
+
+Q: Can I find decision-makers by designation?
+
+A:
+Data Intelligence includes decision-maker insights that help identify relevant decision-makers and business contacts. Please confirm designation-based search with the Leadonspot team.
+
+Q: Can I discover company email addresses?
+
+A:
+Data Intelligence helps identify decision-makers and business contacts, but I don't have verified information about email address availability, so please confirm it with the Leadonspot team.
+
+Q: Can I get information about a company's recent news?
+
+A:
+Yes. Data Intelligence includes company news and business updates.
+
+Q: Can I generate personalized sales pitches?
+
+A:
+Yes. Data Intelligence and Smart CRM provide personalized AI sales pitch suggestions.
+
+Q: Can I use Data Intelligence for prospecting?
+
+A:
+Yes. Data Intelligence supports prospect research with company information, decision-maker insights, buying signals and lead enrichment.
+
+Q: How accurate is the company information?
+
+A:
+Company details are provided where available, and I don't have a verified accuracy figure. Please confirm data accuracy with the Leadonspot team.
+
+Q: What should I do if company information is unavailable?
+
+A:
+Company information is provided where available. If details are missing, please contact the Leadonspot team for help.
+
+==================================================
+AI CALLING AGENT
+==================================================
+
+Q: Can the AI agent call a lead immediately after registration?
+
+A:
+Yes. The AI Calling Agent can automatically call new leads.
+
+Q: Can the AI agent qualify leads during calls?
+
+A:
+Yes. Lead qualification is one of the AI Calling Agent's documented capabilities.
+
+Q: Can the AI agent identify customer interest?
+
+A:
+The AI Calling Agent supports lead qualification and sentiment analysis, which help identify customer interest.
+
+Q: Can the AI agent transfer calls to a human?
+
+A:
+Yes. Smart call transfer is one of its documented capabilities.
+
+Q: Can I review call recordings?
+
+A:
+Call transcripts are a documented capability. I don't have verified information about call recordings, so please confirm it with the Leadonspot team.
+
+Q: Can I analyze customer sentiment from calls?
+
+A:
+Yes. Sentiment analysis is one of the AI Calling Agent's documented capabilities.
+
+Q: Can the AI agent speak in Hindi and English?
+
+A:
+Leadonspot's Voice AI is described as answering callers in the language they are most comfortable with. Please confirm Hindi and English support with the Leadonspot team.
+
+==================================================
+BUSINESS SCENARIOS
+==================================================
+
+Q: I have 10,000 leads in Excel. Can I migrate them?
+
+A:
+Yes, you can import leads from CSV or Excel, and Leadonspot's onboarding team helps migrate historical records. Please confirm the import limit for 10,000 leads with the Leadonspot team.
+
+Q: My sales team works remotely. Can I monitor their performance?
+
+A:
+Yes. Leadonspot provides dashboards and analytics for individual and team performance.
+
+Q: I receive leads from five different platforms. Can I centralize them?
+
+A:
+Yes. Smart CRM centralizes lead management, and Nexus brings conversations from multiple communication channels into one place. Supported channels depend on your configuration.
+
+Q: I want to automate the entire process from lead capture to follow-up. Is that possible?
+
+A:
+Yes. Start with Smart CRM and its Workflow Automation, then add Nexus, Data Intelligence or the AI Calling Agent as needed.
+
+Q: Can I customize the platform according to my business requirements?
+
+A:
+Leadonspot supports custom fields, role-based access and industry-specific workflows. Please confirm deeper customization with the Leadonspot team.
+
+Q: Can I migrate from HubSpot to Leadonspot without losing my data?
+
+A:
+Leadonspot's onboarding team helps migrate historical contacts and records. Please confirm HubSpot migration details with the Leadonspot team.
+
+Q: Can I manage multiple sales pipelines?
+
+A:
+Leadonspot is built for larger sales organizations, with multi-pipeline analytics, role management and team-based task assignment. Please confirm your exact pipeline setup with the Leadonspot team.
+
+Q: Can I manage different user roles and permissions?
+
+A:
+Yes. Smart CRM supports role-based access and role management.
+
+==================================================
+SALES QUESTIONS
+==================================================
+
+Q: How long does implementation take?
+
+A:
+It depends on your industry and setup. For example, most education institutes go live within a week, and most logistics operators within 2 to 4 weeks.
+
+Q: Do you provide onboarding assistance?
+
+A:
+Yes. Leadonspot has an onboarding team that helps with data migration and setup, and logistics customers get a dedicated implementation specialist.
+
+Q: Do you provide customer support?
+
+A:
+Yes. You can email hello@leadonspot.com or call +91 80905 67969, Monday to Friday, 9:00 to 18:00 IST, and the team responds within one business day.
+
+Q: Can you explain the return on investment?
+
+A:
+I don't have verified ROI figures, but the Leadonspot demo includes an ROI discussion for your pipeline. Please book a demo to review it.
+
+Q: Can I try the product before purchasing?
+
+A:
+Yes. Smart CRM offers a 14-day free trial, subject to trial limits.
+
+Q: What happens if my business grows from 10 to 100 employees?
+
+A:
+Leadonspot is built to scale, whether you have 5 reps or 500, with per-user plans and an Enterprise Elite tier with unlimited users. Please contact the Leadonspot team for sizing.
+
+Q: How do you handle sensitive customer information?
+
+A:
+Leadonspot encrypts data at rest and in transit, and role-based access controls ensure sensitive lead information is visible only to authorized users.
+
+Q: Do enterprise customers get extra support?
+
+A:
+Yes. Enterprise customers get a dedicated account team, custom onboarding and priority support with SLAs tailored to their organization.
+
+==================================================
+TOPICS NOT VERIFIED IN DOCUMENTATION
+==================================================
+For these topics there is no verified information. The answer states what is
+documented and asks the customer to confirm with the Leadonspot team.
+
+Q: Can I import leads from IndiaMART?
+
+A:
+I don't have verified information about an IndiaMART integration. Leadonspot supports CSV and spreadsheet lead uploads, API and webhook connections and Zapier, so please confirm IndiaMART with the Leadonspot team.
+
+Q: Can I connect Meta Ads with Leadonspot?
+
+A:
+Leadonspot's solutions describe capturing enquiries that come from Facebook Ads. I don't have verified information about the exact Meta Ads connection, so please confirm it with the Leadonspot team.
+
+Q: Can I export my data if I leave Leadonspot?
+
+A:
+I don't have verified information about exporting all your data when leaving. Leadonspot lists exportable audit logs for enterprise customers, so please confirm data export with the Leadonspot team.
+
+Q: Can I cancel my subscription?
+
+A:
+I don't have verified information about cancellation terms. Please contact the Leadonspot team for confirmation.
+
+Q: What happens if your platform experiences downtime?
+
+A:
+I don't have verified information about uptime or downtime commitments. Enterprise customers get priority support with SLAs tailored to their organization, so please confirm with the Leadonspot team.
+
+Q: Can I create multiple conditions in a single workflow?
+
+A:
+Workflow Automation works with triggers and actions. I don't have verified information about combining multiple conditions in one workflow, so please confirm it with the Leadonspot team.
+
+Q: Can I stop an automation once a deal is closed?
+
+A:
+I don't have verified information about stopping an automation when a deal closes. Please confirm it with the Leadonspot team.
+
+Q: Can I schedule outbound calls?
+
+A:
+The AI Calling Agent supports automated calling workflows and can call new leads automatically. I don't have verified information about scheduling calls for specific times, so please confirm it with the Leadonspot team.
+
+Q: Can the AI agent handle multiple calls?
+
+A:
+Voice AI is described as answering every call instantly, with no busy lines. Please confirm the exact number of simultaneous calls with the Leadonspot team.
+
+Q: Can the AI agent understand different accents?
+
+A:
+I don't have verified information about accent support. Please confirm it with the Leadonspot team.
+
+Q: Can I customize the AI calling script?
+
+A:
+I don't have verified information about customizing the calling script. Please confirm it with the Leadonspot team.
+
+Q: What happens if the customer does not answer?
+
+A:
+I don't have verified information about how unanswered calls are handled. Please confirm it with the Leadonspot team.
+
+Q: I run three different businesses. Can I manage all of them?
+
+A:
+I don't have verified information about managing multiple businesses in one account. Please confirm it with the Leadonspot team.
+
+Q: I want managers to approve certain sales activities. Can I do that?
+
+A:
+Leadonspot supports role-based access and role management, but I don't have verified information about approval workflows. Please confirm it with the Leadonspot team.
+
+Q: Can I track multiple deals belonging to the same company?
+
+A:
+Smart CRM tracks opportunities through sales stages. I don't have verified information about grouping several deals under one company, so please confirm it with the Leadonspot team.
+
+Q: Can I manage customers across different geographical locations?
+
+A:
+Leadonspot's enterprise solutions are built to scale across regions and business units. Please confirm your multi-location setup with the Leadonspot team.
+
+Q: Can I use Leadonspot if my business has multiple departments?
+
+A:
+Leadonspot's enterprise solutions are built to scale across business units with centralized role management. Please confirm your department setup with the Leadonspot team.
+
+Q: Why should I trust a new CRM platform?
+
+A:
+I don't have verified customer or compliance claims to share. Leadonspot encrypts data at rest and in transit and offers a live demo, so you can evaluate it before deciding.
+
+Q: What if my employees don't know how to use AI tools?
+
+A:
+Leadonspot has an onboarding team that helps with setup, and it automates repetitive work so sales teams can focus on customers. Please ask the Leadonspot team about training for your staff.
+
+Q: Why shouldn't I choose a cheaper CRM?
+
+A:
+I can't compare against other products, but Leadonspot connects CRM, conversations, Data Intelligence and AI calling in one platform, and you can evaluate it with the 14-day free trial.
+
+Q: Can I use Leadonspot to forecast my future revenue?
+
+A:
+Yes. Smart CRM includes revenue forecasting that helps you understand and forecast sales performance.
