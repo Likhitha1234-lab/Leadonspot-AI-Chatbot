@@ -1,4 +1,3 @@
-
 import os
 import re
 import time
@@ -8,7 +7,6 @@ from dotenv import load_dotenv
 from groq import Groq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-
 
 # ==================================================
 # 1. PATHS AND CONFIGURATION
@@ -38,7 +36,6 @@ OUT_OF_SCOPE_ANSWER = (
     "other companies or unrelated topics."
 )
 
-
 # ==================================================
 # 2. LOAD GROQ API KEY
 # ==================================================
@@ -52,7 +49,6 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-
 # ==================================================
 # 3. LOAD EMBEDDING MODEL
 # ==================================================
@@ -62,7 +58,6 @@ print("Loading embedding model...")
 embeddings = HuggingFaceEmbeddings(
     model_name=MODEL_NAME
 )
-
 
 # ==================================================
 # 4. CONNECT TO CHROMADB
@@ -82,7 +77,6 @@ if total_records == 0:
     raise ValueError(
         "ChromaDB is empty. Run python ingest.py first."
     )
-
 
 # ==================================================
 # 5. PRICING QUESTION DETECTION
@@ -151,10 +145,10 @@ def is_future_pricing_question(question):
         for word in future_words
     )
 
-
 # ==================================================
 # 6. PRIVACY AND CONFIDENTIALITY CHECK
 # ==================================================
+
 
 def handle_sensitive_question(question):
     q = question.lower()
@@ -209,7 +203,6 @@ def handle_sensitive_question(question):
         )
 
     return None
-
 
 # ==================================================
 # 6B. RISKY / HALLUCINATION-BAIT QUESTIONS
@@ -317,10 +310,10 @@ def handle_risky_question(question):
 
     return None
 
-
 # ==================================================
 # 7. OUT-OF-SCOPE QUESTION CHECK
 # ==================================================
+
 
 def is_out_of_scope_question(question):
     q = question.lower().strip()
@@ -358,23 +351,16 @@ def is_out_of_scope_question(question):
 
     return False
 
-
 # ==================================================
 # 8. CLEAN AI RESPONSE
 # ==================================================
+
 
 def clean_response(text):
     if not text:
         return ""
 
-    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
-
-    text = re.sub(
-        r"(?<!\*)\*(?!\*)(.*?)(?<!\*)\*(?!\*)",
-        r"\1",
-        text
-    )
-
+    text = re.sub(r"\*{1,3}(.*?)\*{1,3}", r"\1", text)
     text = re.sub(r"(?m)^#{1,6}\s*", "", text)
     text = re.sub(r"(?m)^\s*[-*]\s+", "", text)
     text = re.sub(r"`([^`]+)`", r"\1", text)
@@ -382,13 +368,12 @@ def clean_response(text):
 
     return text.strip()
 
-
 # ==================================================
 # 9. CREATE PROMPT
 # ==================================================
 
-def create_prompt(context, question, history_text=""):
 
+def create_prompt(context, question, history_text=""):
     prompt = f"""
 You are Leadonspot's AI assistant.
 
@@ -427,6 +412,7 @@ ANSWERING FROM THE KNOWLEDGE BASE:
 UNKNOWN KNOWLEDGE AND HALLUCINATION:
 
 10. If the requested information is genuinely missing from the context, politely say:
+
 "I don't have verified information about that. Please contact the Leadonspot team for confirmation."
 
 11. Never guess or make assumptions to fill gaps in the knowledge base.
@@ -459,24 +445,34 @@ RESPONSE STYLE:
 RECOMMENDATIONS AND FOLLOW-UPS:
 
 31. If the user describes their business (industry, team size, problem), recommend the matching Leadonspot products using the industry and product information in the context. Team size or other details they mention are context, not a request for a demo.
+
 32. For follow-up questions ("what about its price?", "and for that?"), use the RECENT CONVERSATION to understand what "it" or "that" refers to.
+
 34. If the user states a fact that contradicts the context (for example a wrong trial length), politely correct it using the context.
+
 35. Never make claims about other companies or compare features with competitors. Never write phrases like "many competitors do not", "unlike other CRMs" or "better than". If the context has no comparison for the named product (for example Zoho), say you do not have a verified comparison, then give Leadonspot's own strengths. When asked why to choose Leadonspot or how it differs, describe only Leadonspot's own strengths from the context.
+
 36. If the user asks for a recommendation but gives little detail (for example "I need a CRM" or "which product is best for me"), recommend from what you know and ask ONE question: their industry, team size or monthly lead volume. If asked what information you need, list: industry, team size, monthly leads, current tool, main challenge, and timeline.
+
 37. If the user asks you a question about THEIR business (for example "What industry are you operating in?"), explain that you are Leadonspot's assistant, and invite them to share their own details so you can recommend a product.
+
 38. If the user wants a reply in Hindi or Hinglish, or simpler words, reply that way, using only facts from the context.
+
 39. Use RECENT CONVERSATION only for what the user actually said. If they ask about something they have not told you, say so and ask them.
+
 41. If asked whether you can remember their requirements, say yes: you remember what they tell you during this conversation only.
+
 40. If the user says they will ask several questions together but has not asked them yet, say yes and ask them to send them.
+
 33. If, and only if, the answer is truly not in the context, reply with exactly:
+
 I don't have verified information about that.
+
 Please contact the Leadonspot team for confirmation.
 
 Provide the answer now:
 """
-
     return prompt
-
 
 # ==================================================
 # 8B. KEEP ANSWERS SHORT AND SAFE
@@ -559,78 +555,49 @@ def shorten_answer(question, answer, has_pricing):
 
     return first_sentences(text, 2)
 
-
 # ==================================================
-# 9B. GROQ CALL WITH RETRY
+# 9B. GROQ CALL
 # ==================================================
 
-LLM_MODEL = "openai/gpt-oss-120b"
-FALLBACK_MODEL = "openai/gpt-oss-20b"
-
-
-def _retry_wait_seconds(error_text, attempt):
-    match = re.search(
-        r"try again in (?:(\d+)m)?\s*([\d.]+)s",
-        error_text
-    )
-
-    if match:
-        return (
-            int(match.group(1) or 0) * 60
-            + float(match.group(2))
-            + 1
-        )
-
-    return min(3 * (2 ** attempt), 30)
+LLM_MODEL = "openai/gpt-oss-20b"
 
 
 def call_llm(prompt):
-    for attempt in range(5):
-        model = LLM_MODEL if attempt < 3 else FALLBACK_MODEL
+    start_time = time.time()
 
-        try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.1,
-                max_completion_tokens=500,
-                reasoning_effort="low",
-                include_reasoning=False,
-            )
+    try:
+        response = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.1,
+            max_completion_tokens=300,
+            reasoning_effort="low",
+            include_reasoning=False,
+        )
 
-            return response.choices[0].message.content
+        print(
+            f"Groq response time: "
+            f"{time.time() - start_time:.2f} seconds"
+        )
 
-        except Exception as error:
-            error_text = str(error)
+        return response.choices[0].message.content
 
-            print(
-                f"Groq error (attempt {attempt + 1}, {model}):",
-                error_text[:300]
-            )
-
-            is_rate = (
-                "429" in error_text
-                or "rate" in error_text.lower()
-            )
-
-            if not is_rate and attempt >= 1:
-                break
-
-            time.sleep(
-                min(_retry_wait_seconds(error_text, attempt), 40)
-            )
-
-    return None
-
+    except Exception as error:
+        print("Groq API error:", str(error)[:500])
+        print(
+            f"Groq failed after: "
+            f"{time.time() - start_time:.2f} seconds"
+        )
+        return None
 
 # ==================================================
 # 10. GET CHATBOT RESPONSE
 # ==================================================
 
-def get_chatbot_response(question, history=None):
 
+def get_chatbot_response(question, history=None):
     question = question.strip()
 
     if not question:
@@ -734,7 +701,7 @@ def get_chatbot_response(question, history=None):
         # Perform only ONE ChromaDB search.
         results = vectorstore.similarity_search_with_relevance_scores(
             search_query,
-            k=8
+            k=5
         )
 
         relevant_documents = [
@@ -748,7 +715,7 @@ def get_chatbot_response(question, history=None):
             relevant_documents = list(results[:3])
 
         # Limit context sent to Groq.
-        relevant_documents = relevant_documents[:5]
+        relevant_documents = relevant_documents[:3]
 
         context = "\n\n".join(
             ([pricing_context] if pricing_context else [])
@@ -791,7 +758,6 @@ def get_chatbot_response(question, history=None):
     answer = call_llm(prompt)
 
     if answer and answer.strip():
-
         cleaned = clean_response(answer)
 
         cleaned = shorten_answer(
@@ -810,13 +776,11 @@ def get_chatbot_response(question, history=None):
         "Please try again in a moment."
     )
 
-
 # ==================================================
 # 11. TERMINAL TESTING
 # ==================================================
 
 if __name__ == "__main__":
-
     print("\nLeadonspot Chatbot Ready!")
     print("Type 'exit' to stop.\n")
 
