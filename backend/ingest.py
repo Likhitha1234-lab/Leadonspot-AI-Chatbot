@@ -1,5 +1,5 @@
-
 import json
+import re
 import hashlib
 import logging
 from pathlib import Path
@@ -95,6 +95,41 @@ def load_scraped_pages():
 
 
 # --------------------------------------------------
+# LOAD KNOWLEDGE BASE TEXT FILES (faqs, products, recommendations...)
+# --------------------------------------------------
+
+KB_DIR = BASE_DIR.parent / "knowledge_base"
+KB_SOURCE_TYPE = "knowledge_base"
+
+
+def load_knowledge_base_files():
+    documents = []
+
+    for path in sorted(KB_DIR.glob("*.txt")):
+        text = path.read_text(encoding="utf-8")
+
+        # Split FAQ-style files per "Q:" and others per "## " heading,
+        # so each chunk is one complete question/section.
+        if "\nQ:" in text:
+            parts = re.split(r"\n(?=Q:)", text)
+        else:
+            parts = re.split(r"\n(?=#{2,3} )", text)
+
+        for part in parts:
+            part = part.strip()
+            if len(part) > 60:
+                documents.append(Document(
+                    page_content=part,
+                    metadata={"source": path.name,
+                              "title": path.stem,
+                              "source_type": KB_SOURCE_TYPE},
+                ))
+
+    logging.info("Loaded %s knowledge-base sections", len(documents))
+    return documents
+
+
+# --------------------------------------------------
 # SPLIT DOCUMENTS
 # --------------------------------------------------
 
@@ -153,14 +188,14 @@ def create_embeddings():
 # UPDATE WEBSITE RECORDS
 # --------------------------------------------------
 
-def update_website_records(vectorstore, chunks):
+def update_website_records(vectorstore, chunks, source_type=SOURCE_TYPE):
     # Remove only records created by this website scraper.
     # Existing FAQ/product/pricing records remain untouched.
 
     try:
         existing = vectorstore.get(
             where={
-                "source_type": SOURCE_TYPE
+                "source_type": source_type
             },
             include=[],
         )
@@ -229,6 +264,8 @@ def ingest_website():
 
     chunks = split_documents(pages)
 
+    kb_chunks = split_documents(load_knowledge_base_files())
+
     embeddings = create_embeddings()
 
     vectorstore = Chroma(
@@ -237,9 +274,12 @@ def ingest_website():
         embedding_function=embeddings,
     )
 
+    update_website_records(vectorstore, chunks)
+
     update_website_records(
         vectorstore,
-        chunks,
+        kb_chunks,
+        source_type=KB_SOURCE_TYPE,
     )
 
     logging.info("=" * 50)

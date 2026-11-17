@@ -1,4 +1,3 @@
-
 import json
 import logging
 import re
@@ -32,6 +31,9 @@ REQUEST_TIMEOUT = 20
 REQUEST_DELAY = 1
 
 MIN_CONTENT_LENGTH = 500
+
+# Pages built with JavaScript tabs/animations: always render in a browser.
+BROWSER_FIRST_PATHS = ("/products/", "/solutions", "/contact", "/demo", "/faqs", "/pricing")
 
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "scraped_data"
@@ -270,13 +272,22 @@ def extract_page_content(html, url):
     # Keep useful structure such as headings, lists and tables.
     structured_parts = []
 
+    seen_text = set()
+    block_tags = ["p", "li", "div", "h1", "h2", "h3", "h4", "table", "ul"]
+
     for element in main_content.find_all(
-        ["h1", "h2", "h3", "h4", "p", "li", "td", "th"],
+        ["h1", "h2", "h3", "h4", "h5", "p", "li", "td", "th",
+         "dt", "dd", "summary", "button", "a", "span", "div"],
         recursive=True,
     ):
+        # Only leaf-like elements, otherwise text repeats at every level.
+        if element.name in ("span", "div", "a", "button", "li") and element.find(block_tags):
+            continue
+
         text = element.get_text(" ", strip=True)
 
-        if text:
+        if text and text not in seen_text:
+            seen_text.add(text)
             structured_parts.append(text)
 
     structured_text = "\n".join(structured_parts)
@@ -322,7 +333,7 @@ def extract_internal_links(html, current_url):
     for anchor in soup.find_all("a", href=True):
         absolute_url = urljoin(
             current_url,
-            anchor["href"],
+            str(anchor["href"]),
         )
 
         normalized = normalize_url(absolute_url)
@@ -351,6 +362,9 @@ class BrowserExtractor:
         )
 
     def extract(self, url):
+        if self.browser is None:
+            return None
+
         page = self.browser.new_page(
             user_agent=USER_AGENT
         )
@@ -369,6 +383,20 @@ class BrowserExtractor:
                 )
             except PlaywrightTimeoutError:
                 pass
+
+            # Scroll to trigger lazy sections, open tabs / accordions.
+            for _ in range(6):
+                page.mouse.wheel(0, 2500)
+                page.wait_for_timeout(400)
+
+            for selector in ["[role=tab]", "summary",
+                             "button[aria-expanded=false]"]:
+                for element in page.query_selector_all(selector)[:40]:
+                    try:
+                        element.click(timeout=800)
+                        page.wait_for_timeout(150)
+                    except Exception:
+                        pass
 
             html = page.content()
 
@@ -443,7 +471,11 @@ def scrape_page(url, robots, browser):
         )
 
     # Use Playwright when the initial extraction is too small.
-    if not html or len(content) < MIN_CONTENT_LENGTH:
+    needs_browser = any(
+        part in url for part in BROWSER_FIRST_PATHS
+    ) and len(content) < 6000
+
+    if not html or len(content) < MIN_CONTENT_LENGTH or needs_browser:
         logging.info(
             "Using Playwright fallback: %s",
             url,

@@ -1,4 +1,3 @@
-
 import sqlite3
 import json
 import re
@@ -45,104 +44,95 @@ def initialize_database():
 initialize_database()
 
 
-def extract_details(message):
-    details = {
-        "name": "",
-        "email": "",
-        "company": "",
-        "phone": "",
-        "product": "",
-        "requirement": ""
-    }
 
-    message = message.strip()
+# ==================================================
+# INTENT DETECTION
+# ==================================================
+# "sales team of 20" must NOT trigger lead capture, so we match
+# *requests to be contacted*, not the bare words "sales team".
 
-    # Extract email
-    email_match = re.search(
-        r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}",
-        message
-    )
+DEMO_PATTERNS = [
+    r"\b(book|schedule|arrange|request|get|want|need|see|setup|set up)\b.{0,25}\bdemo\b",
+    r"\bdemo\b.{0,15}\b(please|request)\b",
+    r"\bproduct demo(nstration)?\b",
+    r"\bdemonstration\b",
+]
 
-    if email_match:
-        details["email"] = email_match.group(0)
+CONTACT_PATTERNS = [
+    r"\b(contact|call|reach|email|ring)\s+me\b",
+    r"\bcall\s*back\b|\bcallback\b",
+    r"\bget in touch\b",
+    r"\bfollow[\s-]?up\b.{0,20}\b(me|with me|call|email)\b",
+    r"\b(talk|speak|connect)\b.{0,15}\b(to|with)\b.{0,20}"
+    r"\b(sales|someone|a person|human|representative|executive|team|expert|agent)\b",
+    r"\b(contact|reach)\b.{0,12}\b(sales|your team|the team|support)\b",
+    r"\b(speak|talk)\b.{0,12}\b(real|actual|live)\b.{0,12}\b(person|human|agent)\b",
+    r"\bhow (can|do) i get started\b|\bget started\b.{0,15}\burgent",
+    r"\b(have|get|want)\b.{0,15}\b(someone|your team|sales)\b.{0,15}\b(contact|call|reach)\b",
+    r"\bi('| a)?m interested\b|\bi am interested\b|\binterested in (buying|purchasing|trying)\b",
+    r"\b(sign me up|start a free trial|get a quote|request a quote)\b",
+]
 
-    # Extract phone number
-    phone_match = re.search(
-        r"\+?\d[\d\s().-]{8,}\d",
-        message
-    )
+YES_WORDS = {"yes", "yeah", "yep", "sure", "ok", "okay", "please", "yes please", "y"}
+NO_WORDS = {"no", "nope", "nah", "no thanks", "not now", "n"}
+CANCEL_WORDS = {"cancel", "stop", "never mind", "nevermind", "exit", "no thanks"}
 
-    if phone_match:
-        details["phone"] = phone_match.group(0).strip()
+FIELD_ORDER = ["name", "email", "phone"]
 
-    # Handle comma-separated details:
-    # Name, email, company
-    parts = [part.strip() for part in message.split(",") if part.strip()]
-
-    if details["email"] and len(parts) >= 3:
-        email_index = next(
-            (i for i, part in enumerate(parts) if details["email"] in part),
-            -1
-        )
-
-        if email_index > 0:
-            details["name"] = parts[email_index - 1]
-
-        if email_index >= 0 and email_index + 1 < len(parts):
-            details["company"] = parts[email_index + 1]
-
-    # Handle details written as:
-    # Likhitha N from ABC Technologies
-    if not details["company"]:
-        company_match = re.search(
-            r"\b(?:from|at|working at|company is)\s+(.+)$",
-            message,
-            re.IGNORECASE
-        )
-
-        if company_match:
-            details["company"] = company_match.group(1).strip(" ,.")
-
-            name_part = message[:company_match.start()].strip(" ,.")
-            if not details["name"]:
-                details["name"] = name_part
-
-    # Remove email and phone from extracted name
-    if details["name"]:
-        details["name"] = details["name"].strip(" ,.")
-
-    return details
+PROMPTS = {
+    "name": "May I have your name, please?",
+    "email": "Thanks{n}! What is your email address?",
+    "phone": "And your phone number? (Type 'skip' if you prefer not to share.)",
+}
 
 
 def detect_lead_intent(message):
-    message = message.lower()
-
-    demo_keywords = [
-        "product demo",
-        "schedule a demo",
-        "schedule demo",
-        "book a demo",
-        "book demo",
-        "arrange a demo",
-        "request a demo",
-        "demo please"
-    ]
-
-    sales_keywords = [
-        "contact sales",
-        "talk to sales",
-        "speak with sales",
-        "sales team",
-        "sales representative"
-    ]
-
-    if any(keyword in message for keyword in demo_keywords):
+    m = message.lower()
+    if re.search(r"not ready|not yet ready|just (looking|exploring)|maybe later", m):
+        return None
+    if any(re.search(p, m) for p in DEMO_PATTERNS):
         return "demo"
-
-    if any(keyword in message for keyword in sales_keywords):
+    if any(re.search(p, m) for p in CONTACT_PATTERNS):
         return "sales"
-
     return None
+
+
+# ==================================================
+# FIELD PARSING
+# ==================================================
+
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+PHONE_RE = re.compile(r"\+?\d[\d\s().-]{8,}\d")
+
+
+def clean_name(text):
+    text = EMAIL_RE.sub(" ", text)
+    text = PHONE_RE.sub(" ", text)
+    text = re.sub(
+        r"(?i)\b(my name is|name is|this is|i am|i'm|im|it's|its|call me|name:)\b",
+        " ", text)
+    text = re.sub(r"(?i)\b(and|my|email|phone|number|is|:)\b", " ", text)
+    text = re.sub(r"[^A-Za-z .'-]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip(" .,-")
+    return text.title() if 1 < len(text) <= 60 else ""
+
+
+def looks_like_question(text):
+    t = text.strip().lower()
+    return t.endswith("?") or bool(re.match(
+        r"(what|how|why|which|who|when|where|can|does|do|is|are|will|could)\b", t))
+
+
+def extract_details(message):
+    """Pull any email/phone out of the message (works in any order)."""
+    d = {"name": "", "email": "", "phone": ""}
+    m = EMAIL_RE.search(message)
+    if m:
+        d["email"] = m.group(0)
+    p = PHONE_RE.search(message.replace(d["email"], "")) if d["email"] else PHONE_RE.search(message)
+    if p and len(re.sub(r"\D", "", p.group(0))) >= 10:
+        d["phone"] = p.group(0).strip()
+    return d
 
 
 def get_conversation(conversation_id):
@@ -200,110 +190,129 @@ def save_lead(conversation_id, intent, details):
         conn.commit()
 
 
+
+# ==================================================
+# STATE HELPERS (reuse existing tables)
+# ==================================================
+
+def _load(conversation_id):
+    conv = get_conversation(conversation_id) or {}
+    if not conv:
+        return conv, {}
+    try:
+        details = json.loads(conv["details"] or "{}")
+    except (TypeError, json.JSONDecodeError):
+        details = {}
+    return conv, details
+
+
+def next_missing(details):
+    for f in FIELD_ORDER:
+        if not details.get(f):
+            return f
+    return None
+
+
+def prompt_for(field, details):
+    n = f" {details['name'].split()[0]}" if details.get("name") else ""
+    return PROMPTS[field].format(n=n)
+
+
+def start_collection(conversation_id, intent, details=None):
+    details = details or {}
+    save_conversation(conversation_id, intent, details, "collect_details", 0)
+    field = next_missing(details) or "name"
+    return prompt_for(field, details)
+
+
+def offer_followup(conversation_id):
+    """Call after the bot could not answer: asks if the team should follow up."""
+    save_conversation(conversation_id, "followup", {}, "offer", 0)
+    return ("Would you like our team to follow up with you on this? "
+            "Reply 'yes' and I'll take a few details.")
+
+
+def pending_prompt(conversation_id):
+    """Re-ask the current question after answering a side question."""
+    conv, details = _load(conversation_id)
+    if conv and not conv.get("completed") and conv.get("current_step") == "collect_details":
+        field = next_missing(details)
+        if field:
+            return prompt_for(field, details)
+    return None
+
+
+def finish(conversation_id, conv_intent, details):
+    save_lead(conversation_id, conv_intent, details)
+    save_conversation(conversation_id, conv_intent, details, "completed", 1)
+    return f"Thank you {details['name']}, our team will contact you shortly."
+
+
+# ==================================================
+# MAIN ENTRY: returns (answer_or_None, handled)
+# ==================================================
+
 def process_lead_message(conversation_id, message):
     message = message.strip()
-
     if not message:
         return None, False
 
-    conversation = get_conversation(conversation_id)
-    extracted = extract_details(message)
+    low = message.lower().strip(" .!")
+    conv, details = _load(conversation_id)
+    active = bool(conv) and not conv.get("completed")
 
-    # CASE 1: User provides all contact details together.
-    # This works even if no lead-capture conversation was started.
-    if (
-        extracted["name"]
-        and extracted["email"]
-        and extracted["company"]
-    ):
-        details = extracted.copy()
+    # ---- A. user just got "Would you like us to follow up?" ----
+    if active and conv["current_step"] == "offer":
+        if low in YES_WORDS or low.startswith(("yes", "sure", "ok")):
+            return "Sure! " + start_collection(conversation_id, "followup"), True
+        # anything else = they moved on; drop the offer and let RAG answer
+        save_conversation(conversation_id, "followup", {}, "declined", 1)
+        return None, False
 
-        intent = "demo"
+    # ---- B. we are in the middle of collecting details ----
+    if active and conv["current_step"] == "collect_details":
+        if low in CANCEL_WORDS or low in NO_WORDS:
+            save_conversation(conversation_id, conv["intent"], details, "cancelled", 1)
+            return "No problem! Let me know if you need anything else.", True
 
-        if conversation:
-            try:
-                previous_details = json.loads(conversation["details"] or "{}")
-                previous_details.update({
-                    key: value
-                    for key, value in extracted.items()
-                    if value
-                })
-                details = previous_details
-                intent = conversation["intent"] or "demo"
-            except (TypeError, json.JSONDecodeError):
-                pass
+        field = next_missing(details)
+        found = extract_details(message)
+        for k in ("email", "phone"):
+            if found[k] and not details.get(k):
+                details[k] = found[k]
 
-        save_lead(conversation_id, intent, details)
+        if field == "name" and not details.get("name"):
+            if looks_like_question(message) and not found["email"]:
+                return None, False                      # side question -> RAG
+            name = clean_name(message)
+            if not name:
+                return "Sorry, I didn't catch your name. What should I call you?", True
+            details["name"] = name
+        elif field == "email" and not details.get("email"):
+            if looks_like_question(message):
+                return None, False
+            return "That doesn't look like a valid email. Could you re-enter it?", True
+        elif field == "phone" and not details.get("phone"):
+            if low == "skip":
+                details["phone"] = "not provided"
+            elif looks_like_question(message):
+                return None, False
+            else:
+                return "Please enter a valid phone number (10+ digits), or type 'skip'.", True
 
-        save_conversation(
-            conversation_id,
-            intent,
-            details,
-            "completed",
-            1
-        )
+        nxt = next_missing(details)
+        if nxt:
+            save_conversation(conversation_id, conv["intent"], details, "collect_details", 0)
+            return prompt_for(nxt, details), True
+        return finish(conversation_id, conv["intent"], details), True
 
-        return (
-            f"Thank you for your details, {details['name']}. "
-            "Our team will contact you shortly."
-        ), True
-
-    # CASE 2: Continue an existing lead-capture conversation.
-    if conversation:
-        if conversation["completed"]:
-            return None, False
-
-        try:
-            details = json.loads(conversation["details"] or "{}")
-        except (TypeError, json.JSONDecodeError):
-            details = {}
-
-        details.update({
-            key: value
-            for key, value in extracted.items()
-            if value
-        })
-
-        if not details.get("name"):
-            return "Please share your full name.", True
-
-        if not details.get("email"):
-            return "Please share your email address.", True
-
-        if not details.get("company"):
-            return "Please share your company name.", True
-
-        save_lead(conversation_id, conversation["intent"], details)
-
-        save_conversation(
-            conversation_id,
-            conversation["intent"],
-            details,
-            "completed",
-            1
-        )
-
-        return (
-            f"Thank you for your details, {details['name']}. "
-            "Our team will contact you shortly."
-        ), True
-
-    # CASE 3: Start lead capture when user requests a demo or sales contact.
+    # ---- C. new request to be contacted / demo ----
     intent = detect_lead_intent(message)
-
     if intent:
-        save_conversation(
-            conversation_id,
-            intent,
-            {},
-            "collect_details",
-            0
-        )
-
-        return (
-            "Yes, we can arrange a product demo. "
-            "Please share your name, email address, and company "
-            "so we can set it up."
-        ), True
+        found = extract_details(message)
+        details = {k: v for k, v in found.items() if v}
+        lead = start_collection(conversation_id, intent, details)
+        lead = ("Happy to arrange a demo! " if intent == "demo" else "Sure! ") + lead
+        return lead, True
 
     return None, False
