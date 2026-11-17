@@ -275,3 +275,356 @@ Start with Leadonspot Smart CRM and its Workflow Automation capabilities. Depend
 
 IMPORTANT:
 Never recommend all four products automatically. Understand the customer's requirements before suggesting a product.
+
+
+==================================================
+LEADONSPOT AI AGENTS AND AGENTIC WORKFLOW
+==================================================
+
+Leadonspot uses multiple AI agents that work together across
+the revenue workflow.
+
+These agents share a common intelligence layer and use information
+from CRM records, customer conversations and lead data to help
+businesses identify opportunities, automate tasks, personalize
+customer engagement and improve sales decisions.
+
+The five main AI agents are:
+
+1. REVENUE INTELLIGENCE AGENT
+
+Purpose:
+Helps sales teams identify valuable opportunities, prioritize
+leads and understand revenue performance.
+
+Key capabilities:
+- AI Lead Scoring
+- Buying Intent Detection
+- Opportunity Prioritization
+- Time to Close Prediction
+- Deal Risk Analysis
+- Revenue Forecasting
+- Next Best Action Recommendations
+
+Example:
+It helps sales representatives identify which leads are more
+likely to convert and which deals need attention.
+
+2. CONVERSATION INTELLIGENCE AGENT
+
+Purpose:
+Analyzes customer conversations and turns them into useful
+sales insights.
+
+Key capabilities:
+- AI Conversation Summaries
+- Meeting and Call Summaries
+- Email and Chat Summaries
+- Smart Conversation Routing
+- Real-Time Language Translation
+- Sentiment Analysis
+- Conversation Timeline
+
+Example:
+It helps sales teams understand customer discussions, identify
+sentiment and keep track of important conversations.
+
+3. SALES ASSISTANT AGENT
+
+Purpose:
+Helps sales representatives communicate with prospects and
+improve customer engagement.
+
+Key capabilities:
+- AI Sales Pitch Generation
+- Personalized Reply Suggestions
+- AI Email Writing
+- Follow-Up Recommendations
+- Objection Handling Suggestions
+- Meeting Preparation
+- Customer Context Generation
+
+Example:
+It helps sales representatives prepare personalized pitches,
+write emails and decide how to follow up with prospects.
+
+4. WORKFLOW AUTOMATION AGENT
+
+Purpose:
+Automates repetitive sales activities and helps keep opportunities
+moving through the sales pipeline.
+
+Key capabilities:
+- Automated Task Creation
+- Follow-Up Automation
+- Lead Assignment
+- Workflow Triggers
+- Reminder Automation
+- CRM Data Enrichment
+- Pipeline Automation
+
+Example:
+It can automate follow-up tasks, reminders and lead assignments
+based on configured workflow conditions.
+
+5. CUSTOMER INTELLIGENCE AGENT
+
+Purpose:
+Builds a better understanding of customers by combining CRM data,
+engagement information and external intelligence.
+
+Key capabilities:
+- Engagement Analytics
+- Buying Signals
+- Account Insights
+- Relationship Mapping
+
+Example:
+It helps businesses understand customer engagement, account
+activity and potential business opportunities.
+
+==================================================
+HOW THE AI AGENTS WORK TOGETHER
+==================================================
+
+Leadonspot uses a shared intelligence layer across its AI agents.
+
+The agents support different stages of the revenue workflow.
+
+Example workflow:
+
+1. A new lead enters the system.
+2. Lead enrichment adds relevant company and business information.
+3. Revenue Intelligence Agent analyzes lead quality, buying intent
+   and conversion potential.
+4. Sales Assistant Agent helps prepare personalized sales pitches
+   and follow-up suggestions.
+5. Workflow Automation Agent helps assign leads, create tasks
+   and automate reminders.
+6. Conversation Intelligence Agent analyzes customer interactions.
+7. Customer Intelligence Agent provides account insights and
+   engagement information.
+
+Together, these capabilities help sales teams work with better
+information, prioritize opportunities and reduce manual activities.
+
+==================================================
+LEAD ENRICHMENT AND DATA INTELLIGENCE
+==================================================
+
+Leadonspot provides lead enrichment capabilities through
+Data Intelligence and its connected intelligence layer.
+
+Lead enrichment means adding useful business information to
+existing lead records.
+
+ENRICHMENT CAPABILITIES
+
+1. Firmographic Data
+   Provides company-related information such as industry,
+   company size, employee count, revenue information and
+   headquarters details where available.
+
+2. Technographic Data
+   Provides information about technologies used by businesses.
+
+3. Decision-Maker Insights
+   Helps identify relevant decision-makers and business contacts.
+
+4. Buying Signals
+   Helps identify business activities and signals that may indicate
+   potential interest or buying intent.
+
+5. AI Lead Scoring
+   Evaluates leads using relevant information, engagement and
+   buying intent to help prioritize prospects.
+
+6. Personalized Sales Recommendations
+   Uses enriched information to help sales teams prepare relevant
+   pitches and customer engagement strategies.
+
+7. Enrichment APIs
+   Allows businesses to use Data Intelligence and lead enrichment
+   capabilities through APIs in their own systems.
+
+WHY LEAD ENRICHMENT IS USEFUL
+
+- Reduces manual company research.
+- Gives sales teams better customer context.
+- Helps identify potential decision-makers.
+- Improves lead prioritization.
+- Supports personalized sales outreach.
+- Helps sales representatives focus on relevant prospects.
+
+==================================================
+LEADONSPOT VS TRADITIONAL CRM SOFTWARE
+==================================================
+
+Traditional CRM systems primarily help businesses store customer
+information, manage leads, track opportunities and maintain
+sales activities.
+
+Leadonspot goes beyond traditional CRM functionality by combining
+CRM, Data Intelligence, customer conversations, AI calling and
+multiple AI agents in one connected revenue platform.
+
+KEY DIFFERENCES
+
+1. AI AGENTIC WORKFLOW
+
+Traditional CRM:
+Mostly depends on sales representatives to perform activities
+and manually manage their workflows.
+
+Leadonspot:
+Uses multiple AI agents that work together across the revenue
+workflow to provide insights, recommendations and automation.
+
+2. LEAD ENRICHMENT
+
+Traditional CRM:
+Customer and company information may need to be entered or
+enriched manually or through separate tools.
+
+Leadonspot:
+Provides firmographic and technographic enrichment, decision-maker
+insights, buying signals and enrichment APIs.
+
+3. INTELLIGENT LEAD SCORING
+
+Traditional CRM:
+May depend on manually configured rules or basic scoring.
+
+Leadonspot:
+Provides AI-powered lead scoring, buying intent detection and
+opportunity prioritization.
+
+4. SALES ASSISTANCE
+
+Traditional CRM:
+Sales representatives often prepare emails, pitches and
+follow-ups manually.
+
+Leadonspot:
+Sales Assistant Agent helps generate personalized pitches,
+email content, reply suggestions and follow-up recommendations.
+
+5. CONVERSATION INTELLIGENCE
+
+Traditional CRM:
+Customer conversations may be stored across separate
+communication channels.
+
+Leadonspot:
+Nexus provides a unified conversation workspace with AI summaries,
+smart routing, sentiment analysis and collaboration.
+
+6. WORKFLOW AUTOMATION
+
+Traditional CRM:
+Automates configured sales tasks and workflow activities.
+
+Leadonspot:
+Workflow Automation Agent supports task creation, follow-ups,
+lead assignment, reminders and pipeline automation.
+
+7. REVENUE INTELLIGENCE
+
+Traditional CRM:
+Often focuses on pipeline tracking and reporting.
+
+Leadonspot:
+Revenue Intelligence Agent provides buying intent detection,
+deal risk analysis, time-to-close prediction and revenue forecasting.
+
+8. AI CALLING
+
+Traditional CRM:
+Calling capabilities may require separate telephony tools.
+
+Leadonspot:
+AI Calling Agent supports inbound and outbound calls,
+lead qualification, appointment scheduling and automated
+follow-ups.
+
+==================================================
+STANDARD ANSWERS FOR COMPARISON QUESTIONS
+==================================================
+
+Question:
+What makes Leadonspot different from traditional CRM software?
+
+Answer:
+Unlike traditional CRMs that mainly focus on storing customer
+data and tracking sales activities, Leadonspot combines multiple
+AI agents, lead enrichment and intelligent automation. Its agents
+help with lead scoring, buying intent, personalized pitches,
+conversation insights and workflow automation.
+
+Question:
+Does Leadonspot use Agentic AI?
+
+Answer:
+Yes. Leadonspot uses multiple AI agents that work together
+through a shared intelligence layer to support sales intelligence,
+customer conversations, personalized engagement and automation.
+
+Question:
+What are the five AI agents in Leadonspot?
+
+Answer:
+Leadonspot has five main AI agents: Revenue Intelligence,
+Conversation Intelligence, Sales Assistant, Workflow Automation
+and Customer Intelligence.
+
+Question:
+What is lead enrichment?
+
+Answer:
+Lead enrichment adds useful company, technology and decision-maker
+information to lead records. It helps sales teams understand
+prospects better and prioritize potential customers.
+
+Question:
+How does Leadonspot help sales teams?
+
+Answer:
+Leadonspot combines AI lead scoring, enrichment, sales assistance,
+conversation intelligence and workflow automation to help teams
+identify promising leads and manage their sales activities.
+
+Question:
+Does Leadonspot only work as a CRM?
+
+Answer:
+No. Leadonspot combines Smart CRM, Data Intelligence, Nexus
+and AI Calling Agent into one connected AI Revenue Operating System.
+
+==================================================
+ACCURACY GUIDELINES
+==================================================
+
+- Do not describe every feature as available in every subscription.
+- Do not assume all AI agents are included in every pricing plan.
+- Do not claim that agents perform actions that are not documented.
+- Explain that the agents share an intelligence layer and support
+  different parts of the revenue workflow.
+- Do not invent third-party integrations.
+- Refer customers to the official product and pricing pages
+  for plan-specific availability.
+
+  ## AI Calling Agent – Call Transcripts and CRM Integration
+
+Leadonspot AI Calling Agent supports call transcription and CRM synchronization where configured.
+
+Key capabilities:
+
+- Records and generates transcripts of AI-powered calls.
+- Helps sales teams review customer conversations.
+- Supports syncing call transcripts with CRM records where the integration is configured.
+- Helps maintain conversation history for better customer follow-ups.
+- Supports call-related insights and sentiment analysis.
+
+If a user asks whether call transcripts can be synced with CRM, explain:
+
+"Yes, Leadonspot supports syncing call transcripts with CRM records where the integration is configured. This helps sales teams review previous customer conversations and manage follow-ups."

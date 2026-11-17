@@ -279,3 +279,44 @@ IMPORTANT ACCURACY RULES
 - Never request passwords, OTPs or payment card details.
 - If information is unavailable, use the appropriate fallback response.
 - Offer human assistance when necessary.
+
+
+Question: What are the AI agents available in Leadonspot?
+Answer: Leadonspot has five AI agents: Revenue Intelligence, Conversation Intelligence, Sales Assistant, Workflow Automation and Customer Intelligence.
+
+Question: What does the Revenue Intelligence Agent do?
+Answer: It helps with lead scoring, buying intent detection, opportunity prioritization, deal risk analysis and revenue forecasting.
+
+Question: What does the Conversation Intelligence Agent do?
+Answer: It analyzes calls, meetings, emails and chats, providing summaries, sentiment analysis and smart conversation routing.
+
+Question: What does the Sales Assistant Agent do?
+Answer: It helps sales teams generate personalized pitches, write emails, suggest replies and plan follow-ups.
+
+Question: What does the Workflow Automation Agent do?
+Answer: It automates repetitive activities such as task creation, follow-ups, lead assignments, reminders and pipeline workflows.
+
+Question: What does the Customer Intelligence Agent do?
+Answer: It provides engagement analytics, buying signals, account insights and relationship mapping.
+
+Question: How is Leadonspot different from a traditional CRM?
+Answer: Leadonspot combines traditional CRM capabilities with multiple AI agents, lead enrichment, buying intent detection, conversation intelligence and intelligent workflow automation.
+
+Question: Does Leadonspot provide lead enrichment?
+Answer: Yes. Leadonspot provides firmographic and technographic information, decision-maker insights, buying signals and enrichment APIs.
+
+Question: Can Leadonspot identify high-intent leads?
+Answer: Yes. Its Revenue Intelligence capabilities include AI lead scoring, buying intent detection and opportunity prioritization.
+
+Q: How are the four Leadonspot products different from each other?
+
+A:
+Leadonspot offers four products with different purposes:
+
+1. Smart CRM: Manages leads, sales pipelines, opportunities and follow-ups.
+2. Data Intelligence: Provides company research, decision-maker insights and sales intelligence.
+3. Nexus: Manages customer conversations across WhatsApp, Email, Instagram, Facebook and Live Chat.
+4. AI Calling Agent: Automates inbound and outbound calls and helps qualify leads.
+
+In short, Smart CRM manages sales, Data Intelligence researches prospects,
+Nexus manages conversations, and AI Calling Agent automates calls.

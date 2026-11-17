@@ -1,0 +1,179 @@
+{
+    "pages_visited": 28,
+    "pages_extracted": 28,
+    "requests_extractions": 25,
+    "playwright_extractions": 3,
+    "insufficient_content": [],
+    "failed_pages": [],
+    "blocked_pages": [],
+    "pages": [
+        {
+            "url": "https://leadonspot.com/",
+            "title": "Leadonspot. The AI Revenue Operating System",
+            "content_length": 3260,
+            "extraction_method": "playwright"
+        },
+        {
+            "url": "https://leadonspot.com/about",
+            "title": "Leadonspot | AI Powered CRM & Revenue Intelligence Platform",
+            "content_length": 3974,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/career",
+            "title": "Careers. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 1716,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/contact",
+            "title": "Contact. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 390,
+            "extraction_method": "playwright"
+        },
+        {
+            "url": "https://leadonspot.com/demo",
+            "title": "Leadonspot. The AI Revenue Operating System",
+            "content_length": 735,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/faqs",
+            "title": "FAQs. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 6861,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries",
+            "title": "Industry Solutions | AI CRM for Every Vertical. Leadonspot",
+            "content_length": 2979,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/education",
+            "title": "CRM for Education Institutes | AI Admission & Enquiry Management | LeadOnSpot. Leadonspot",
+            "content_length": 14925,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/finance",
+            "title": "Customer Engagement Platform for Finance | Leadonspot. Leadonspot",
+            "content_length": 15823,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/healthcare",
+            "title": "CRM & Voice AI for Healthcare | Patient Engagement Platform | Leadonspot. Leadonspot",
+            "content_length": 14327,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/it-saas",
+            "title": "CRM & Sales Intelligence for IT & SaaS Companies | Leadonspot. Leadonspot",
+            "content_length": 13873,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/logistics",
+            "title": "Logistics CRM Software | Leadonspot. Leadonspot",
+            "content_length": 15321,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/manufacturing",
+            "title": "CRM for Manufacturing & B2B Distributors | Leadonspot. Leadonspot",
+            "content_length": 14771,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/real-estate",
+            "title": "AI CRM for Real Estate | Leadonspot. Leadonspot",
+            "content_length": 15028,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/industries/retail",
+            "title": "CRM for Retail Businesses | Leadonspot. Leadonspot",
+            "content_length": 15174,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/pricing",
+            "title": "Pricing. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 2436,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/privacy",
+            "title": "Privacy & data. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 1345,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/products",
+            "title": "Products. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 2126,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/products/crm",
+            "title": "LeadOnSpot CRM | AI Powered CRM Software for Sales Teams. Leadonspot",
+            "content_length": 1000,
+            "extraction_method": "playwright"
+        },
+        {
+            "url": "https://leadonspot.com/products/nexus",
+            "title": "LeadOnSpot Nexus | Omnichannel Customer Messaging Platform. Leadonspot",
+            "content_length": 12142,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/products/sales-intelligence",
+            "title": "Leadonspot Sales Intelligence | B2B Data Enrichment & Lead Intelligence Platform. Leadonspot",
+            "content_length": 9423,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/products/voice-ai",
+            "title": "Leadonspot Voice AI | Enterprise AI Voice Agent Platform. Leadonspot",
+            "content_length": 5842,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/solutions",
+            "title": "Solutions for Sales, Support, Marketing & Enterprise. Leadonspot",
+            "content_length": 824,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/solutions/enterprise",
+            "title": "Enterprise CRM & Sales Platform with SSO, RBAC & API | Leadonspot. Leadonspot",
+            "content_length": 10327,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/solutions/marketing",
+            "title": "Marketing Automation & Lead Capture CRM for Marketing Teams | Leadonspot. Leadonspot",
+            "content_length": 10742,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/solutions/sales",
+            "title": "CRM for Sales Teams | AI Sales CRM & Pipeline Management | Leadonspot. Leadonspot",
+            "content_length": 12889,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/solutions/support",
+            "title": "Customer Support Software | Omnichannel Help Desk | Leadonspot. Leadonspot",
+            "content_length": 12977,
+            "extraction_method": "requests"
+        },
+        {
+            "url": "https://leadonspot.com/terms",
+            "title": "Terms of service. Leadonspot. AI-powered CRM & revenue intelligence. Leadonspot",
+            "content_length": 1755,
+            "extraction_method": "requests"
+        }
+    ]
+}

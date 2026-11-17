@@ -10,7 +10,7 @@ Leadonspot offers different products with separate commercial arrangements.
 PRODUCT PRICING STRUCTURE
 
 1. Smart CRM
-   Offers subscription plans with features and AI capabilities depending on the selected plan.
+   Offers subscription plans with different features and AI capabilities depending on the selected plan.
 
 2. Nexus
    Separately priced product.
@@ -30,12 +30,63 @@ IMPORTANT PRICING RULES
 - Never assume all four products are included in one subscription.
 - Never promise unlimited usage.
 - Exact prices, billing cycles, taxes, credits, usage limits and plan entitlements must be verified.
+- Prices mentioned below are monthly prices unless otherwise specified.
+- All listed prices are subject to applicable GST.
 
-STANDARD PRICING RESPONSE
+==================================================
+SMART CRM PRICING PLANS
+==================================================
 
-If a customer asks about pricing and exact information is unavailable, respond:
+Smart CRM offers the following subscription plans.
 
-"Our pricing depends on the product and the features or usage you require. I can help you identify the right solution. Would you like our sales team to share the latest pricing details?"
+1. ESSENTIAL PLAN
+
+Price:
+₹2,999 per month + GST.
+
+Includes:
+- 1 user.
+- Smart CRM functionality as defined by the selected plan.
+
+2. PROFESSIONAL PLAN
+
+Price:
+₹8,999 per month + GST.
+
+Includes:
+- 3 users.
+- 300 AI Intelligence credits per month.
+- Professional plan features.
+
+3. ENTERPRISE ELITE PLAN
+
+Price:
+Custom pricing.
+
+Includes:
+- Unlimited users.
+- Custom allocation.
+- Enterprise-level subscription arrangement.
+
+IMPORTANT:
+- Do not assume that every AI feature is included in every plan.
+- Do not promise additional credits or users without verification.
+- Contact the Leadonspot sales team for detailed plan comparisons.
+
+==================================================
+AI INTELLIGENCE CREDIT PACKS
+==================================================
+
+The following AI Intelligence credit packs are listed:
+
+1. 100 credits - ₹1,999 + GST.
+2. 500 credits - ₹7,999 + GST.
+3. 1,000 credits - ₹13,999 + GST.
+
+IMPORTANT:
+- Do not assume credits are unlimited.
+- Do not invent credit validity periods.
+- Confirm applicable usage conditions with the sales team.
 
 ==================================================
 14-DAY FREE TRIAL
@@ -65,7 +116,8 @@ IMPORTANT RULES
 - Do not promise that all premium features are available during the free trial.
 - Do not describe the free trial as unlimited.
 - Explain the trial limitations whenever relevant.
-- Do not assume that other products are included in the Smart CRM trial.
+- Do not assume that Nexus or other products are included in the Smart CRM trial.
+- Do not promise free access to paid features.
 
 ==================================================
 CUSTOMER PRICING QUESTIONS
@@ -75,7 +127,37 @@ Question:
 What is the price of Smart CRM?
 
 Response:
-Smart CRM has subscription plans with different features and AI capabilities. Please contact the Leadonspot sales team for the latest verified pricing.
+Smart CRM offers three plans: Essential at ₹2,999/month, Professional at ₹8,999/month, and Enterprise Elite with custom pricing. Applicable GST is extra.
+
+Question:
+What is included in the Essential plan?
+
+Response:
+The Essential plan costs ₹2,999/month + GST and includes 1 user. Contact the sales team for a detailed feature comparison.
+
+Question:
+What is included in the Professional plan?
+
+Response:
+The Professional plan costs ₹8,999/month + GST and includes 3 users and 300 AI Intelligence credits per month.
+
+Question:
+What is the Enterprise Elite price?
+
+Response:
+Enterprise Elite has custom pricing based on your requirements. Please contact the Leadonspot sales team for a quote.
+
+Question:
+Does Smart CRM offer AI Intelligence credits?
+
+Response:
+Yes. The Professional plan includes 300 AI Intelligence credits per month. Additional credit packs are also available.
+
+Question:
+How much do AI Intelligence credits cost?
+
+Response:
+Credit packs are available at ₹1,999 for 100 credits, ₹7,999 for 500 credits, and ₹13,999 for 1,000 credits, plus GST.
 
 Question:
 Is Nexus included in Smart CRM?
@@ -101,6 +183,12 @@ Does Leadonspot offer discounts?
 Response:
 I don't have verified information about current discounts. Please contact the Leadonspot sales team for confirmation.
 
+Question:
+Does the free trial include all products?
+
+Response:
+No. The 14-day trial is for Smart CRM and has specific limitations. Other products have separate commercial arrangements.
+
 ==================================================
 PRICING FALLBACK
 ==================================================
@@ -110,3 +198,26 @@ If exact pricing information is unavailable, respond:
 "I don't have the latest verified pricing details available right now. Please connect with our sales team for the current pricing and available plans."
 
 Never guess or generate pricing information.
+
+==================================================
+OFFICIAL PRICING REFERENCE
+==================================================
+
+Website:
+https://leadonspot.com/pricing
+
+For updated prices, plan comparisons, product-specific pricing, billing conditions and current offers, refer customers to the official pricing page or Leadonspot sales team.
+
+==================================================
+FINAL PRICING RESPONSE GUIDELINES
+==================================================
+
+- Answer pricing questions directly whenever verified prices are available.
+- For Yes/No pricing questions, start with Yes or No.
+- Keep answers short and conversational.
+- Mention GST when quoting listed prices.
+- Mention the relevant plan and price instead of giving generic pricing statements.
+- Do not mix prices of different products.
+- Do not confuse AI Intelligence credits with other product usage credits.
+- If a price or feature is not documented, ask the customer to contact the sales team.
+- Never generate fictional prices or discounts.

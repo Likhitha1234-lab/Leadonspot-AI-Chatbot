@@ -1,0 +1,362 @@
+# LEADONSPOT – TECHNICAL SUPPORT AND TROUBLESHOOTING
+
+## 1. Purpose
+
+This document provides basic guidance for common Leadonspot product questions and technical issues.
+
+The chatbot should provide simple troubleshooting steps and ask for more information when the problem is unclear.
+
+Note: These are general troubleshooting suggestions. Exact navigation steps may vary depending on the user's account, permissions, product version, and configuration.
+
+## 2. Login Issues
+
+### Problem: Unable to Log In
+
+Possible reasons:
+- Incorrect email address or password.
+- Internet connectivity issues.
+- Browser-related problems.
+- Account access or authentication issues.
+
+Suggested steps:
+1. Check whether the registered email address is correct.
+2. Verify the password and try again.
+3. Check the internet connection.
+4. Refresh the page or try another browser.
+5. If available, use the Forgot Password option to reset the password.
+
+If the problem continues:
+Contact Leadonspot support with the registered email address and a description of the issue.
+
+### Problem: Forgot Password
+
+Suggested steps:
+1. Open the Leadonspot login page.
+2. Select Forgot Password, if available.
+3. Enter the registered email address.
+4. Follow the password-reset instructions received by email.
+
+If no reset email arrives, check the spam folder and contact support.
+
+## 3. Excel and CSV Lead Import
+
+### Problem: Unable to Import Leads
+
+Possible reasons:
+- Unsupported file format.
+- Missing required fields.
+- Incorrect column names.
+- Invalid email or phone number formats.
+- Duplicate records.
+- Incorrect file formatting.
+
+Suggested steps:
+1. Check whether the file is in a supported format, such as CSV or Excel, according to the import screen.
+2. Review the column headers.
+3. Make sure required fields contain valid information.
+4. Remove unnecessary blank rows and columns.
+5. Check for duplicate or incorrectly formatted records.
+6. Try uploading the corrected file again.
+
+### Problem: Some Leads Were Not Imported
+
+Possible reasons:
+- Invalid records.
+- Missing required information.
+- Duplicate lead entries.
+- Data validation errors.
+
+Suggested steps:
+1. Review the import summary or error report, if available.
+2. Identify records that failed.
+3. Correct missing or invalid information.
+4. Upload the corrected records again.
+
+Important:
+The exact supported file size, column mapping, and import limits should be confirmed from the user's account or official product documentation.
+
+## 4. Lead Assignment
+
+### Problem: How to Assign Leads to Sales Team Members
+
+General workflow:
+1. Open the lead management section.
+2. Select the lead that needs to be assigned.
+3. Look for the owner or assignment option.
+4. Select the appropriate team member, if the option is available.
+5. Save the changes.
+
+### Problem: Unable to Assign a Lead
+
+Possible reasons:
+- The user does not have sufficient permissions.
+- The selected team member is inactive.
+- The lead is not available for editing.
+- The account has a configuration issue.
+
+Suggested steps:
+1. Check whether you have permission to assign leads.
+2. Verify that the team member is active.
+3. Refresh the page and try again.
+4. Contact your account administrator if the issue continues.
+
+## 5. Opportunities and Sales Pipeline
+
+### Problem: How to Create an Opportunity
+
+General workflow:
+1. Open the Opportunities section.
+2. Select the option to create a new opportunity, if available.
+3. Enter the required opportunity information.
+4. Associate the relevant lead or company, if supported.
+5. Save the opportunity.
+
+### Problem: How to Track Opportunities
+
+The sales pipeline helps teams understand the progress of opportunities through different sales stages.
+
+General workflow:
+1. Open the pipeline section.
+2. Review the available opportunity stages.
+3. Check the current stage of each opportunity.
+4. Update opportunity information when its status changes, if permitted.
+
+### Problem: How to Move an Opportunity to Another Stage
+
+General workflow:
+1. Find the opportunity in the pipeline.
+2. Open the opportunity details.
+3. Look for the stage or status field.
+4. Select the appropriate stage.
+5. Save the update.
+
+The exact stage names and update options depend on the account configuration.
+
+### Problem: Opportunity Is Not Showing in the Pipeline
+
+Possible reasons:
+- Incorrect filters.
+- Opportunity has not been created successfully.
+- The opportunity belongs to another owner.
+- The user does not have permission to view it.
+
+Suggested steps:
+1. Clear or review the pipeline filters.
+2. Search using the opportunity name.
+3. Check the assigned owner.
+4. Verify that the opportunity was saved.
+5. Contact the account administrator if it is still missing.
+
+## 6. Lead Scoring
+
+### Problem: Why Does a Lead Have a Low Score?
+
+Lead scoring helps sales teams prioritize prospects based on available lead information and scoring criteria.
+
+A low score may indicate:
+- Limited customer information.
+- Low buying intent.
+- Less engagement.
+- A weaker match with the business's target customer profile.
+
+Suggested steps:
+1. Review the lead information.
+2. Check whether important fields are missing.
+3. Review available engagement and buying-intent information.
+4. Update accurate lead details where necessary.
+5. Recheck the lead score if the system supports recalculation.
+
+Important:
+A low score does not necessarily mean the lead will never become a customer.
+
+## 7. WhatsApp Integration
+
+### Problem: Unable to Connect WhatsApp
+
+Possible reasons:
+- Incorrect account configuration.
+- Missing authorization.
+- Expired authentication.
+- Unsupported account setup.
+- Integration or connectivity problems.
+
+Suggested steps:
+1. Check whether WhatsApp integration is available in your plan.
+2. Verify the required account and business credentials.
+3. Check whether the integration authorization is active.
+4. Review any error message shown during connection.
+5. Contact support if the connection still fails.
+
+### Problem: WhatsApp Messages Are Not Syncing
+
+Suggested steps:
+1. Check the WhatsApp integration status.
+2. Verify that the connected account is active.
+3. Check the internet connection.
+4. Review any integration error messages.
+5. Contact support with the affected account details and approximate time of the issue.
+
+## 8. Instagram and Facebook Integrations
+
+### Problem: Unable to Connect Instagram or Facebook
+
+Possible reasons:
+- Missing account permissions.
+- Incorrect account configuration.
+- Expired authorization.
+- The required integration is unavailable or not enabled.
+
+Suggested steps:
+1. Check whether the integration is supported for your account.
+2. Verify the connected social media account.
+3. Review the required permissions.
+4. Reauthorize the integration if the platform provides that option.
+5. Contact support if the problem continues.
+
+### Problem: Social Media Messages Are Not Appearing
+
+Suggested steps:
+1. Verify that the relevant account is connected.
+2. Check the integration status.
+3. Review any available synchronization errors.
+4. Confirm that the connected account has the required permissions.
+5. Contact support if messages continue to be missing.
+
+## 9. Data Intelligence
+
+### Problem: Company Search Is Not Returning Results
+
+Possible reasons:
+- Incorrect company name.
+- Incomplete search information.
+- Company information is unavailable.
+- Search or usage limits have been reached.
+
+Suggested steps:
+1. Check the company name spelling.
+2. Try searching with the official company name.
+3. Provide additional company information if the search supports it.
+4. Check the available search or usage allowance.
+5. Try again later if a temporary issue occurs.
+
+### Problem: Company or Decision-Maker Information Is Missing
+
+Possible reasons:
+- The information is not available in the data source.
+- The company has limited publicly available information.
+- The search criteria are too broad.
+
+Suggested steps:
+1. Verify the company name.
+2. Try a more specific search.
+3. Review the available company information.
+4. Contact support if the issue appears to be technical.
+
+Important:
+Data Intelligence results may vary depending on data availability. Do not assume every company or decision-maker will have complete information.
+
+## 10. AI Calling Agent
+
+### Problem: AI Calling Agent Is Not Working
+
+Possible reasons:
+- Calling service is not enabled.
+- Account configuration is incomplete.
+- Calling usage or credits are unavailable.
+- A temporary technical issue.
+
+Suggested steps:
+1. Verify whether the AI Calling Agent is enabled for your account.
+2. Check the calling configuration.
+3. Review any error messages.
+4. Check applicable calling usage or charges.
+5. Contact support if the issue continues.
+
+### Problem: Call Transcript Is Not Available
+
+Suggested steps:
+1. Check whether the call was completed.
+2. Verify whether transcription is enabled for the account.
+3. Check the call history or related conversation details, if available.
+4. Allow time for processing if the system indicates that processing is ongoing.
+5. Contact support if the transcript remains unavailable.
+
+### Problem: Transfer AI Call to a Human Agent
+
+AI-to-human transfer may depend on the calling workflow and account configuration.
+
+Suggested steps:
+1. Check whether human handoff is configured.
+2. Verify the assigned human agent or transfer destination.
+3. Review the calling workflow settings.
+4. Contact support if the transfer option is unavailable.
+
+Do not promise that every account supports call transfer.
+
+## 11. General Troubleshooting
+
+### Problem: A Feature Is Not Working
+
+Suggested steps:
+1. Refresh the application.
+2. Check your internet connection.
+3. Log out and log in again.
+4. Try using another supported browser.
+5. Check whether the issue affects one feature or the entire application.
+6. Contact support if the problem continues.
+
+### Problem: Application Is Slow
+
+Possible reasons:
+- Slow internet connection.
+- Browser performance issues.
+- Large data operations.
+- Temporary server-side problems.
+
+Suggested steps:
+1. Check your internet connection.
+2. Refresh the application.
+3. Close unnecessary browser tabs.
+4. Try another supported browser.
+5. Contact support if performance does not improve.
+
+## 12. Information to Collect Before Contacting Support
+
+When a customer reports a technical issue, ask for:
+
+- Registered email address.
+- Product name: Smart CRM, Nexus, Data Intelligence, or AI Calling Agent.
+- Description of the problem.
+- Steps followed before the issue occurred.
+- Exact error message, if any.
+- Screenshot of the issue, if available.
+- Approximate date and time when it occurred.
+
+Never ask users to share their passwords, OTPs, API secrets, or other confidential credentials.
+
+## 13. Chatbot Support Guidelines
+
+- Explain troubleshooting steps in simple language.
+- Give numbered steps wherever possible.
+- Ask one question at a time when more information is needed.
+- Do not claim that an issue has been fixed unless it has actually been resolved.
+- Do not invent dashboard buttons, menu names, or settings.
+- Do not claim that an integration is available for every plan.
+- If the issue requires account access or technical investigation, direct the customer to Leadonspot support.
+- Never request passwords, OTPs, or secret keys.
+
+## 14. Leadonspot Support Contact
+
+For assistance with product access, integrations, or technical issues:
+
+Email: hello@leadonspot.com
+
+Phone: +91 80905 67969
+
+Location: Bengaluru, India
+
+Business hours: Monday to Friday, 9:00 AM to 6:00 PM IST.
+
+Website: https://leadonspot.com
+
+The support team may need the user's account details and a description of the issue to investigate it.
